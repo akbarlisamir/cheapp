@@ -19,3 +19,4 @@ D:\ELTE MsC\2019 autumn\Interactive Media and Design\Last\cheapp\CheApp\CheApp\C
 D:\ELTE MsC\2019 autumn\Interactive Media and Design\Last\cheapp\CheApp\CheApp\CheApp\obj\Debug\netstandard2.0\Settings\AddMarket.xaml.g.cs
 D:\ELTE MsC\2019 autumn\Interactive Media and Design\Last\cheapp\CheApp\CheApp\CheApp\obj\Debug\netstandard2.0\Settings\AddCategory.xaml.g.cs
 D:\ELTE MsC\2019 autumn\Interactive Media and Design\Last\cheapp\CheApp\CheApp\CheApp\obj\Debug\netstandard2.0\Settings\AddType.xaml.g.cs
+D:\ELTE MsC\2019 autumn\Interactive Media and Design\Last\cheapp\CheApp\CheApp\CheApp\obj\Debug\netstandard2.0\TestPage.xaml.g.cs

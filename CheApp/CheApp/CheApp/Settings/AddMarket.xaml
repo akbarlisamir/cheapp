@@ -10,6 +10,7 @@
             <Entry Placeholder="Market Name" x:Name="marketnameE"/>
             <Entry Placeholder="Address" x:Name="addressE"/>
             <Button Text="Save" Clicked="OnSaveAddMarket"/>
+            <Button Text="Cancel" Clicked="Cancel"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

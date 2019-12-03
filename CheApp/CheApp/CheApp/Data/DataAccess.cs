@@ -333,7 +333,7 @@ namespace CheApp
                 //var q = database.Query<Product>("SELECT p.ProductName, p.Price, m.MarketName FROM Products p " +
                 //    "INNER JOIN Markets m on p.MarketId = m.Id").ToList();
                 //return q.AsEnumerable();
-                return database.Query<Product>("SELECT * FROM Products").AsEnumerable();
+                return database.Query<Product>("SELECT * FROM Products ORDER BY Price ASC").AsEnumerable();
             }
         }
 
@@ -375,7 +375,19 @@ namespace CheApp
                 //return query.AsEnumerable();
             }
         }
+
+        public void DeleteAllProducts()
+        {
+            lock (collisionLock)
+            {
+                database.DropTable<Product>();
+                database.CreateTable<Product>();
+            }
+            this.Products = null;
+            this.Products = new ObservableCollection<Product>
+              (database.Table<Product>());
+        }
         #endregion
-#endregion
+        #endregion
     }
 }

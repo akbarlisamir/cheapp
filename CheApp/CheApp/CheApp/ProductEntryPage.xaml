@@ -31,9 +31,14 @@
                     SelectedIndexChanged="SelIndChanged1"/>
             <Button Text="Save"
                     Clicked="OnSaveClick"/>
-            <Button Text="Save and next"/>
+            <Button Text="Cancel" Clicked="Cancel"/>
 
         </StackLayout>
     </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Home" Activated="BackToHome"
+                     Order="Primary"/>
+    </ContentPage.ToolbarItems>
     
 </ContentPage>

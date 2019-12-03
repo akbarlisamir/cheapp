@@ -19,6 +19,11 @@ namespace CheApp.Settings
             this.dataAccess = new DataAccess();
         }
 
+        public void Cancel(Object o, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
         public void OnSaveAddType(Object o, EventArgs e)
         {
             if (dataAccess.AddType(typevalueE.Text) == 1)

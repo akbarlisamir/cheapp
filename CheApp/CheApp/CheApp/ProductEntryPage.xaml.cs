@@ -25,6 +25,16 @@ namespace CheApp
             this.BindingContext = this.dataAccess;
         }
 
+        public void BackToHome(Object o, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+        }
+
+        public void Cancel(Object o, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
         public void OnSaveClick(object sender, EventArgs e)
         {
             double a = 0;

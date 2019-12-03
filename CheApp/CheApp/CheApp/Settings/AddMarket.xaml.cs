@@ -19,6 +19,11 @@ namespace CheApp.Settings
             this.dataAccess = new DataAccess();
         }
 
+        public void Cancel(Object o, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
+
         public void OnSaveAddMarket(Object o, EventArgs e)
         {
             if (dataAccess.AddMarket(marketnameE.Text, addressE.Text) == 1)

@@ -22,6 +22,11 @@ namespace CheApp.Settings
             Navigation.PushAsync(new Markets());
         }
 
+        public void BackToHome(Object o, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+        }
+
         public void TypesSetting(Object o, EventArgs e)
         {
             Navigation.PushAsync(new Types());

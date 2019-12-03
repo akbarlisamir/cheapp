@@ -30,7 +30,23 @@ namespace CheApp
 
             this.BindingContext = this.dataAccess;
         }
-            
+
+        public void OnTextChanged(Object o, EventArgs e)
+        {
+            SearchBar searchBar = (SearchBar)o;
+
+        }
+
+
+        public void OnRemoveAllProducts(Object o, EventArgs e)
+        {
+            if (this.dataAccess.Products.Any())
+            {
+                this.dataAccess.DeleteAllProducts();
+                this.BindingContext = this.dataAccess;
+            }
+            OnAppearing();
+        }
 
         void New_Clicked(Object o, EventArgs e)
         {

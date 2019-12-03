@@ -18,6 +18,11 @@ namespace CheApp.Settings
             InitializeComponent();
             this.dataAccess = new DataAccess();
         }
+        
+        public void Cancel(Object o, EventArgs e)
+        {
+            Navigation.PopAsync();
+        }
 
         public void OnSaveAddCategory(Object o, EventArgs e)
         {
@@ -25,26 +30,6 @@ namespace CheApp.Settings
             {
                 Navigation.PopAsync();
             }
-        }
-
-        public void OnRemoveAllCategories(Object o, EventArgs e)
-        {
-            if (this.dataAccess.Categories.Any())
-            {
-                this.dataAccess.DeleteAllCategories();
-                this.BindingContext = this.dataAccess;
-            }
-            Navigation.PopAsync();
-        }
-
-        public void OnRemoveCategory(Object o, EventArgs e)
-        {
-            if (this.dataAccess.Categories.Any())
-            {
-                this.dataAccess.DeleteAllCategories();
-                this.BindingContext = this.dataAccess;
-            }
-            Navigation.PopAsync();
         }
     }
 }

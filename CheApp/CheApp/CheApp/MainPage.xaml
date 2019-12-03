@@ -11,28 +11,40 @@
                      Clicked="New_Clicked"/>
         <ToolbarItem Text="Settings"
                      Clicked="Settings_Clicked"/>
-        <ToolbarItem Text="Home"
-                     Clicked="Home_Clicked"/>
+        <!--<ToolbarItem Text="Home"
+                     Clicked="Home_Clicked"/>-->
+        <ToolbarItem Name="Remove All" Activated="OnRemoveAllProducts"
+                     Priority="0" Order="Secondary"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <ListView x:Name="ProductsView"
+        <StackLayout Orientation="Vertical">
+            <SearchBar Placeholder="Search..." TextChanged="OnTextChanged"/>
+            <ListView x:Name="ProductsView"
             ItemsSource="{Binding Path=Products}"
             ListView.RowHeight="50">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <StackLayout Orientation="Horizontal">
+                        <Grid Padding="10, 10, 10, 5">
+                                <StackLayout Orientation="Vertical">
+                                    <Label FontAttributes="Bold" Text="{Binding ProductName}"/>
+                                    <Label Text="{Binding MarketName}"/>
+                                </StackLayout>
+                                <Label Text="{Binding TypeName}" FontAttributes="Italic" Grid.Column="1"/>
+                                <Label FontAttributes="Bold" Text="{Binding Price}" Grid.Column="2" HorizontalTextAlignment="End"/>
+                        </Grid>
+                        <!--<StackLayout Orientation="Horizontal">
                             <Entry Text="{Binding ProductName}" />
                             <Entry Text="{Binding Price}"/>
                             <Entry Text="{Binding MarketName}"/>
                             <Entry Text="{Binding CategoryName}"/>
                             <Entry Text="{Binding TypeName}"/>
-                        </StackLayout>
+                        </StackLayout>-->
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        </StackLayout>
     </ContentPage.Content>
-
 </ContentPage>

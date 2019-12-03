@@ -9,6 +9,7 @@
         <StackLayout Margin="20, 20, 20 ,0">
             <Entry Placeholder="Category Value" x:Name="categoryvalueE"/>
             <Button Text="Save" Clicked="OnSaveAddCategory"/>
+            <Button Text="cancel" Clicked="Cancel"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

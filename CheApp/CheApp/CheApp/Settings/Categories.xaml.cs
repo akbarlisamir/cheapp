@@ -24,7 +24,39 @@ namespace CheApp.Settings
             base.OnAppearing();
             // The instance of CustomersDataAccess
             // is the data binding source
+            this.dataAccess = new DataAccess();
             this.BindingContext = this.dataAccess;
+        }
+
+        public void OnAddCategory(Object o, EventArgs e)
+        {
+            //if (dataAccess.AddMarket()
+            Navigation.PushAsync(new AddCategory());
+        }
+
+        public void OnRemoveAllCategories(Object o, EventArgs e)
+        {
+            if (this.dataAccess.Categories.Any())
+            {
+                this.dataAccess.DeleteAllCategories();
+                this.BindingContext = this.dataAccess;
+            }
+            Navigation.PopAsync();
+        }
+
+        public void BackToHome(Object o, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+        }
+
+        public void OnRemoveCategory(Object o, EventArgs e)
+        {
+            if (this.dataAccess.Categories.Any())
+            {
+                this.dataAccess.DeleteAllCategories();
+                this.BindingContext = this.dataAccess;
+            }
+            Navigation.PopAsync();
         }
     }
 }

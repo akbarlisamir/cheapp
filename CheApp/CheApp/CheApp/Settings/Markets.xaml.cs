@@ -43,6 +43,11 @@ namespace CheApp.Settings
             Navigation.PopAsync();
         }
 
+        public void BackToHome(Object o, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
+        }
+
         public void OnRemoveClick(Object o, EventArgs e)
         {
             if (this.dataAccess.Markets.Any())

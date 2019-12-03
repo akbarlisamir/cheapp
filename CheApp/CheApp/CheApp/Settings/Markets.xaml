@@ -12,14 +12,19 @@
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal">
-                        <Entry Text="{Binding MarketName}" />
-                        <Entry Text="{Binding Address}"/>
+                        <Entry Text="{Binding MarketName}"
+                               FontSize="22"
+                               FontAttributes="Bold"/>
+                        <Entry Text="{Binding Address}"
+                               FontSize="22"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Home" Activated="BackToHome"
+                     Order="Primary"/>
         <ToolbarItem Name="Add" Activated="OnAddClick"
                      Priority="0" Order="Secondary"/>
         <ToolbarItem Name="Remove" Activated="OnRemoveClick"

@@ -24,6 +24,7 @@ namespace CheApp.Settings
             base.OnAppearing();
             // The instance of CustomersDataAccess
             // is the data binding source
+            this.dataAccess = new DataAccess();
             this.BindingContext = this.dataAccess;
         }
 
@@ -41,6 +42,11 @@ namespace CheApp.Settings
                 this.BindingContext = this.dataAccess;
             }
             Navigation.PopAsync();
+        }
+
+        public void BackToHome(Object o, EventArgs e)
+        {
+            Navigation.PopToRootAsync();
         }
 
         public void OnRemoveType(Object o, EventArgs e)

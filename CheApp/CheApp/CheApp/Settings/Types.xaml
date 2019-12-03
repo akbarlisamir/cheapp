@@ -7,18 +7,22 @@
              x:Class="CheApp.Settings.Types">
     <ListView x:Name="TypesView"
             ItemsSource="{Binding Path=Types}"
-            ListView.RowHeight="150">
+            ListView.RowHeight="50">
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Orientation="Horizontal">
-                        <Entry Text="{Binding Value}" />
+                        <Entry Text="{Binding Value}"
+                               FontSize="22"
+                               FontAttributes="Bold"/>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
     <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Home" Activated="BackToHome"
+                     Order="Primary"/>
         <ToolbarItem Name="Add" Activated="OnAddType"
                      Priority="0" Order="Secondary"/>
         <ToolbarItem Name="Remove" Activated="OnRemoveType"
