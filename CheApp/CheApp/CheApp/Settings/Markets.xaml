@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CheApp.Settings.Markets">
+    <ListView x:Name="MarketsView"
+            ItemsSource="{Binding Path=Markets}"
+            ListView.RowHeight="50">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal">
+                        <Entry Text="{Binding MarketName}" />
+                        <Entry Text="{Binding Address}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="Add" Activated="OnAddClick"
+                     Priority="0" Order="Secondary"/>
+        <ToolbarItem Name="Remove" Activated="OnRemoveClick"
+                     Priority="1" Order="Secondary"/>
+        <ToolbarItem Name="RemoveAll" Activated="OnRemoveAllClick"
+                     Priority="2" Order="Secondary"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>
