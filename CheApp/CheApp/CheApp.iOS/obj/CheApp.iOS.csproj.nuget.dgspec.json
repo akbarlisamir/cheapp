@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj": {}
+    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj": {}
   },
   "projects": {
-    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj": {
+    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj",
+        "projectUniqueName": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj",
         "projectName": "CheApp.iOS",
-        "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj",
+        "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp.iOS\\CheApp.iOS.csproj",
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
-        "outputPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp.iOS\\obj\\",
+        "outputPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\CheApp.csproj": {
-                "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\CheApp.csproj"
+              "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\CheApp.csproj": {
+                "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\CheApp.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\CheApp.csproj": {
+    "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\CheApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\CheApp.csproj",
+        "projectUniqueName": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\CheApp.csproj",
         "projectName": "CheApp",
-        "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\CheApp.csproj",
+        "projectPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\CheApp.csproj",
         "packagesPath": "C:\\Users\\samir\\.nuget\\packages\\",
-        "outputPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Final\\CheApp\\CheApp\\CheApp\\obj\\",
+        "outputPath": "D:\\ELTE MsC\\2019 autumn\\Interactive Media and Design\\Last\\cheapp\\CheApp\\CheApp\\CheApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -117,6 +117,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[4.2.0.709249, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.6.292, )"
             }
           },
           "imports": [

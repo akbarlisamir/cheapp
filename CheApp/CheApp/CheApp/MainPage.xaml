@@ -6,11 +6,33 @@
              mc:Ignorable="d"
              x:Class="CheApp.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="New"
+                     Clicked="New_Clicked"/>
+        <ToolbarItem Text="Settings"
+                     Clicked="Settings_Clicked"/>
+        <ToolbarItem Text="Home"
+                     Clicked="Home_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <ListView x:Name="ProductsView"
+            ItemsSource="{Binding Path=Products}"
+            ListView.RowHeight="50">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Entry Text="{Binding ProductName}" />
+                            <Entry Text="{Binding Price}"/>
+                            <Entry Text="{Binding MarketName}"/>
+                            <Entry Text="{Binding CategoryName}"/>
+                            <Entry Text="{Binding TypeName}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
 
 </ContentPage>

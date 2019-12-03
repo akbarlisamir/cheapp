@@ -7,8 +7,33 @@
              x:Class="CheApp.ProductEntryPage"
              Title="Product Entry">
 
-    <StackLayout Margin="20">
-        
-    </StackLayout>
+    <ContentPage.Content>
+        <StackLayout Margin="20, 20, 20, 0">
+            <Entry x:Name="productE" Placeholder="Product Name"/>
+            <Entry x:Name="priceE" Placeholder="Price"/>
+            <Picker x:Name="typeP"
+                    Title="Select a type"
+                    TitleColor="Red"
+                    ItemsSource="{Binding Types}"
+                    ItemDisplayBinding="{Binding Value}"
+                    SelectedIndexChanged="SelIndChanged2"/>
+            <Picker x:Name="categoryP"
+                    Title="Select a category"
+                    TitleColor="Green"
+                    ItemsSource="{Binding Categories}"
+                    ItemDisplayBinding="{Binding Value}"
+                    SelectedIndexChanged="SelIndChanged"/>
+            <Picker x:Name="marketP"
+                    Title="Select a market"
+                    TitleColor="Blue"
+                    ItemsSource="{Binding Markets}"
+                    ItemDisplayBinding="{Binding MarketName}"
+                    SelectedIndexChanged="SelIndChanged1"/>
+            <Button Text="Save"
+                    Clicked="OnSaveClick"/>
+            <Button Text="Save and next"/>
+
+        </StackLayout>
+    </ContentPage.Content>
     
 </ContentPage>

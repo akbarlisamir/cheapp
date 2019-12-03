@@ -6,11 +6,13 @@ namespace CheApp
 {
     public partial class App : Application
     {
+        public static string filePath;
+
         public App()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
